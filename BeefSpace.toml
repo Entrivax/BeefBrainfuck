@@ -1,0 +1,11 @@
+FileVersion = 1
+Projects = {Brainfuck = {Path = "."}}
+
+[Workspace]
+StartupProject = "Brainfuck"
+
+[Configs.Test.Win32]
+ConfigSelections = {corlib = {Config = "Debug"}}
+
+[Configs.Test.Win64]
+ConfigSelections = {corlib = {Config = "Debug"}}
