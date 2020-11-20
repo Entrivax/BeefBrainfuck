@@ -25,7 +25,7 @@ namespace Brainfuck
 					bufferSize = value;
 				}
 			}
-			var fileContent = new String;
+			var fileContent = new String();
 			switch (File.ReadAllText(arg[0], fileContent))
 			{
 			case .Err(let err):
@@ -73,8 +73,8 @@ namespace Brainfuck
 
 		public Result<void, String> ParseProgram(String program)
 		{
-			let instructionsList = new List<List<Instruction>>;
-			instructionsList.Add(new List<Instruction>);
+			let instructionsList = new List<List<Instruction>>();
+			instructionsList.Add(new List<Instruction>());
 			char8 lastInstruction = '\0';
 			int lastInstructionCount = 0;
 			void setLastInstruction(char8 instruction)
@@ -127,7 +127,7 @@ namespace Brainfuck
 					setLastInstruction(program[i]);
 					break;
 				case '[':
-					instructionsList.Add(new List<Instruction>);
+					instructionsList.Add(new List<Instruction>());
 					break;
 				case ']':
 					let whileInstructions = instructionsList.PopBack();
